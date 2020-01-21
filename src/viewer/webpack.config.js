@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin")
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : "development"
 
 module.exports = {
-  entry: "./src/client/main.ts",
+  entry: "./src/viewer/main.ts",
 
   mode: env,
   devtool: env == "development" ? "eval-source-map": "",
@@ -21,9 +21,9 @@ module.exports = {
   },
 
   output: {
-    // Output client.js here
-    path: path.resolve("./dist/client"),
-    filename: "client.js"
+    // Output viewer.js here
+    path: path.resolve("./dist/viewer"),
+    filename: "viewer.js"
   },
 
   module: {
@@ -39,7 +39,7 @@ module.exports = {
   plugins: [
     // Copy some static files as well in the build
     new CopyWebpackPlugin([
-      { from: "./src/client/*.html", to: path.resolve("./dist/client/"), flatten:true },
+      { from: "./src/viewer/*.html", to: path.resolve("./dist/viewer/"), flatten:true },
     ]),
   ],
 
