@@ -4,9 +4,10 @@
     "module": "commonjs",
     "sourceMap": true,
     "skipLibCheck": true,
-    "outDir": "../../dist/server"
+    "outDir": "../../dist/server",
+    "strict": true,
   },
   "files": [
-    "main.ts"
+    "main.ts",
   ]
 }
